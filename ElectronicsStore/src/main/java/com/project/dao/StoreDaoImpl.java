@@ -24,8 +24,8 @@ public class StoreDaoImpl implements IStoreDao{
 				PreparedStatement statement= connection.prepareStatement(Queries.INSERTQUERY);){
 				statement.setInt(1, store.getProductId());
 				statement.setString(2, store.getProductName());
-				statement.setString(3, store.getProductManufacturer());
-				statement.setString(4, store.getProductCategory());
+				statement.setString(3, store.getProductCategory());
+				statement.setString(4, store.getProductManufacturer());
 				statement.setDouble(5, store.getPrice());
 				boolean flag=statement.execute();
 				System.out.println(flag);
